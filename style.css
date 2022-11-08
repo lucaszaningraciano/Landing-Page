@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, html{
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    background: hsl(353,100%,99%);
+}
+
+.main-container{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 23.5rem auto;
+    grid-template-areas: "header hero""content hero";
+    background: url(images/bg-pattern-desktop.svg) no-repeat center/cover;
+}
+
+header{
+    grid-area: header;
+    margin: 6.5rem auto 0 auto;
+    max-width: 54rem;
+    width:100%;
+    padding-left:2rem;
+}
+
+.left-container{
+    padding-right: 5rem;
+    padding-left: 9rem;
+    max-width:54rem;
+    width:100%;
+    margin:0 auto;
+    grid-area: content;
+}
+
+.logo{
+    margin-bottom: 4rem;
+    padding-left: 7rem;
+}
+
+.left-container h1{
+    font-size: 4.5rem;
+    letter-spacing: 16px;
+    line-height: 1.05;
+    opacity:0.8;
+}
+
+.title{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.left-container p{
+    color: hsl(0, 36%, 70%);
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+    max-width:43rem;
+    opacity: 0.8;
+}
+
+.right-container{
+    grid-area: hero;
+}
+
+.right-container img{
+    width: auto;
+    height: 100vh;
+    display: block;
+}
+
+form{
+    padding: 1.2rem 0;
+    position: relative;
+    max-width: 44rem;
+}
+
+form input{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    width: 80%;
+    height: 5.5rem;
+    border-radius: 100rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    padding: 0 3rem;
+    color: hsl(0, 36%, 70%);
+    opacity: 0.8;
+}
+
+input.input-error{
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+input:focus{
+    outline:none;
+}
+
+::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+.error-img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15.5rem;
+    visibility: hidden;
+}
+
+.error{
+    font-size: 1.4rem;
+    color: hsl(0, 93%, 68%);
+    margin-left: 3rem;
+}
+
+.error-img.visible{
+    visibility: visible;
+}
+
+button{
+    position: absolute;
+    top: 50%;
+    right:10%;
+    transform: translateY(-50%);
+    width: 10rem;
+    height: 5.5rem;
+    border-radius: 100rem;
+    border:none;
+    cursor:pointer;
+    background: linear-gradient(135deg, hsl(0,80%,86%) 0%, hsl(0,74%,74%) 100%);
+}
+
+button:hover{
+    background: linear-gradient(135deg, hsl(0,100%,100%), hsl(0,80%,86%) 0%);
+
+    
+}
+
+@media only screen and (max-width: 970px) {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        background: #fff;
+        height: 100vh;
+        min-width: 37.5rem;
+        
+        
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows:auto auto auto;
+        grid-template-areas: "header" "hero" "content";
+        background:#FFF;
+    }
+
+    header{
+        margin: 3rem auto 0 auto;
+        max-width: 37.5rem;
+    }
+
+    .left-container{
+        padding-right: 2rem;
+        max-width: 37.5rem;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        
+    }
+
+    .logo{
+        width: 20rem;
+    }
+
+    h1, p{
+        text-align:center;
+    }
+
+    .left-container h1{
+        font-size: 3rem;
+        letter-spacing: 10px;
+        margin-top: 7rem;
+    }
+
+    .left-container p{
+        width:160%;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        padding: 1rem 1rem;
+        max-width: 37.5rem;
+        
+    }
+
+    .right-container img{
+        width: 37.5rem;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    form{
+        padding: 1rem 0;
+        max-width: 37.5rem;
+    } 
+
+    form input{
+        font-size: 1.4rem;
+        height: 4.5rem;
+    }
+
+    .error-img{
+        right: 8rem;
+    }
+
+    .error{
+        font-size: 1.3rem;
+    }
+
+    button{
+        width: 6.5rem;
+        height: 4.5rem;
+    }
+
+
+}
